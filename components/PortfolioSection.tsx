@@ -1,0 +1,70 @@
+import React from 'react';
+import { SectionHeader } from './SectionHeader';
+import { Plus, Eye } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const PORTFOLIO_IMAGES = [
+    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-14.webp",
+    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-02.webp",
+    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-15.webp",
+    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-06.webp",
+    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-12.webp",
+    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-08.webp",
+    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-04.webp",
+    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-10.webp",
+];
+
+export const PortfolioSection: React.FC = () => {
+  return (
+    <section className="py-20 md:py-28 relative" id="demo">
+      <div className="max-w-[1290px] mx-auto px-4 md:px-6">
+        <SectionHeader text="আমাদের করা কিছু লোগো" />
+
+        <div className="flex justify-center gap-8 mb-16 font-medium text-gray-500">
+           <div className="bg-white/80 backdrop-blur-sm p-1.5 rounded-full border border-white/50 shadow-soft flex gap-2">
+             {['Premium', 'Business', 'Startup'].map((tab, i) => (
+               <button key={i} className={`px-6 py-2 rounded-full transition-all duration-300 text-sm font-semibold ${i === 0 ? 'bg-primary text-white shadow-lg shadow-primary/30' : 'hover:bg-gray-100 text-gray-600'}`}>
+                 {tab}
+               </button>
+             ))}
+           </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+           {PORTFOLIO_IMAGES.map((src, idx) => (
+               <motion.div 
+                 key={idx}
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: idx * 0.05 }}
+                 className="aspect-[4/3] overflow-hidden rounded-2xl group relative cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 bg-white border border-white/20"
+               >
+                  <img 
+                    src={src} 
+                    alt={`Portfolio ${idx}`} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-dark/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                     <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 flex gap-4">
+                        <button className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary transition-colors shadow-lg hover:scale-110 duration-300">
+                           <Plus size={24} />
+                        </button>
+                        <button className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary-dark transition-colors shadow-lg hover:scale-110 duration-300">
+                           <Eye size={20} />
+                        </button>
+                     </div>
+                  </div>
+               </motion.div>
+           ))}
+        </div>
+
+        <div className="mt-24 text-center">
+            <h2 className="font-bengali text-3xl font-bold text-dark mb-3">সহজ এবং বাজেট ফ্রেন্ডলি প্যাকেজ</h2>
+            <p className="font-bengali text-gray-500 text-lg">কোন কন্ট্রাক্ট কিংবা গোপন চার্জ নেই</p>
+        </div>
+      </div>
+    </section>
+  );
+};
