@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
                 {text}
                 <span className="w-1 h-[0.8em] bg-primary ml-1 animate-pulse"></span>
               </span>
-              <span className="ml-3">লোগো</span>
+              <span className="ml-3">মেনু</span>
             </h1>
 
             <p className="text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed font-bengali mb-6">
@@ -62,10 +62,11 @@ export const Hero: React.FC = () => {
 
             <ul className="font-bengali space-y-2 mb-8 inline-block text-left">
               {[
-                "ইউনিক কনসেপ্ট",
-                "বাংলা ও ইংরেজি টাইপোগ্রাফি",
-                "সময় মত কাজের ডেলিভারি",
-                "সোশ্যাল মিডিয়া রেডি ফরম্যাট"
+                "স্মার্ট মেনু ডিরেক্টরি",
+                "কাস্টোমাইজ ওন ডিমান্ড",
+                "সেলস মেকানিজম স্ট্রাটেজি",
+                "পৃথিবীর সকল প্রান্তে ডেলিভারি",
+                "বাংলা & ইংরেজি এরাবিকসহ ১৪ টি ভাষায় মেনু"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-2 text-gray-700 font-medium">
                   <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
@@ -114,10 +115,10 @@ export const Hero: React.FC = () => {
               {/* Description */}
               <div className="flex-1 text-center lg:text-left lg:pr-10 lg:border-r border-gray-100">
                 <h2 className="font-bengali font-bold text-xl md:text-2xl text-dark mb-3 leading-tight">
-                  প্রতিটি লোগো আমরা তৈরি করি রিসার্চ ও আপনার ভিশন বুঝে।
+                  প্রতিটি মেনু আমরা তৈরি করি রিসার্চ ও আপনার ভিশন বুঝে।
                 </h2>
                 <p className="font-bengali text-gray-500 text-base leading-relaxed">
-                  আপনি যদি চান এমন একটি লোগো, যেটা ব্র্যান্ড কে রিপ্রেজেন্ট করবে এবং অন্যদের থেকে আলাদা রাখবে — তাহলে আমরা প্রস্তুত!
+                  আপনি যদি চান এমন একটি মেনু , যেটা ব্র্যান্ড কে রিপ্রেজেন্ট করবে এবং অন্যদের থেকে আলাদা রাখবে — তাহলে আমরা প্রস্তুত!
                 </p>
               </div>
 

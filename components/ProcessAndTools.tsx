@@ -6,22 +6,22 @@ import { motion } from 'framer-motion';
 export const ProcessAndTools: React.FC = () => {
   const steps = [
     {
-      title: "আপনার রিকোয়ারমেন্টস লিখুন",
-      desc: "আপনার কি ধরনের লোগো চাচ্ছেন, কোম্পানির ধরন, আপনার গ্রাহক কে, লোগোটি কোথায় ব্যবহার হবে - এই তথ্যগুলো দিন।",
+      title: "কাউন্সিলরের বিশেষজ্ঞ পরামর্শ",
+      desc: "আপনার প্রয়োজন, আপনার চিন্তা—সব বুঝে একজন কাউন্সিলর Color Hut থেকে আপনাকে সবচেয়ে উপযোগী সেরা আইডিয়া ও সঠিক নির্দেশনা শেয়ার করবেন।",
       img: "https://colorhutbd.xyz/image/Graphics-Design.png",
       link: "#requirment",
       btn: "ফর্ম পুরন করুন"
     },
     {
-      title: "পছন্দের প্যাকেজ সিলেক্ট করুন",
-      desc: "আপনার প্রয়োজন এবং বাজেট অনুযায়ী প্যাকেজ সিলেক্ট করুন। প্রতিটি প্যাকেজে কি কি পাচ্ছেন তা বিস্তারিত দেখে নিন।",
+      title: "ব্র্যান্ড-ফোকাসড ডিজাইন প্রসেস",
+      desc: "আমাদের ডিজাইনার প্রথমে আপনার ব্র্যান্ড ও কাস্টমার প্রোফাইল বুঝবে। প্রতিটি ডিজাইন এক এক করে শেয়ার করা হবে, আপনি রিভিউ ও পরিবর্তন চাইতে পারবেন, এবং চূড়ান্ত অনুমোদনের পর প্রিন্টের জন্য প্রস্তুত হবে।",
       img: "https://xtrecy.com/wp-content/uploads/2022/12/Graphics-Design-02-1.png",
       link: "#pricing",
       btn: "প্যাকেজ সিলেক্ট করুন"
     },
     {
-      title: "ফাইনাল ফাইল রিসিভ করুন",
-      desc: "আমাদের ডিজাইনার আপনার সাথে যোগাযোগ করে ফাইনাল ডিজাইন শেষ করে ইমেইল এ সোর্স ফাইল পাঠিয়ে দিবে।",
+      title: "লজিস্টিক & ডেলিভারি",
+      desc: "আমাদের লজিস্টিকস টিম প্রথমে অর্ডার যাচাই করবে এবং প্রিন্ট, বাইন্ডিং ও প্যাকেজিং সম্পূর্ণ করবে। পণ্যটি ডেলিভারির জন্য সম্পূর্ণ প্রস্তুত এবং নিরাপদ গন্তব্যে পৌঁছে দেওয়া হবে।",
       img: "https://xtrecy.com/wp-content/uploads/2022/12/Graphics-Design-01.png",
       link: "#",
       btn: "প্রোগ্রেস দেখুন"
@@ -31,7 +31,7 @@ export const ProcessAndTools: React.FC = () => {
   return (
     <section className="py-20 md:py-28 relative" id="audit">
       <div className="max-w-[1290px] mx-auto px-4 md:px-6 relative z-10">
-        <SectionHeader text="কিভাবে লোগো অর্ডার করবেন ?" />
+        <SectionHeader text="কালার হাট পার্সোনাল মেনু এসিস্ট্যান্ট!" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-28">
           {steps.map((step, idx) => (
@@ -78,7 +78,7 @@ export const ProcessAndTools: React.FC = () => {
           className="pt-16 border-t border-gray-200/60"
         >
             <div className="text-center mb-10">
-                <h3 className="font-bengali text-2xl font-bold text-gray-400 uppercase tracking-widest">আমরা যে টুলস ব্যবহার করি</h3>
+                <h3 className="font-bengali text-2xl font-bold text-gray-400 uppercase tracking-widest">Global Markets Experience</h3>
             </div>
             <div className="flex justify-center items-center">
                 <img 
