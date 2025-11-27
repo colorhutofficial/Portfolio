@@ -89,13 +89,13 @@ export const PricingSection: React.FC = () => {
       <div className="max-w-[1290px] mx-auto px-4 md:px-6 relative z-10">
          <div className="text-center mb-20">
              <span className="text-primary font-bold tracking-widest uppercase text-xs bg-white border border-orange-100 px-4 py-2 rounded-full shadow-sm">Pricing Plans</span>
-             <h2 className="font-bengali text-4xl md:text-5xl font-bold text-dark mt-6 mb-4">সেরা বাজেটে সেরা প্যাকেজ</h2>
-             <p className="font-bengali text-gray-500 max-w-2xl mx-auto text-lg">আপনার ব্যবসার ধরণ অনুযায়ী যেকোনো একটি প্যাকেজ বেছে নিন</p>
+             <h2 className="font-bengali text-4xl md:text-5xl font-bold text-dark mt-6 mb-4">Best Deal!</h2>
+             <p className="font-bengali text-gray-500 max-w-2xl mx-auto text-lg">ব্যবসার ধরণ অনুযায়ী প্যাকেজ বেছে নিন</p>
          </div>
 
          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8 items-center">
             <PricingCard 
-                name="স্টার্টআপ"
+                name="Primary"
                 price="১৫৯৯"
                 whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Startup%20Package"
                 delay={0}
@@ -111,7 +111,7 @@ export const PricingSection: React.FC = () => {
                 ]}
             />
             <PricingCard 
-                name="প্রিমিয়াম"
+                name="Secondary"
                 price="২৯৯৯"
                 whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Premium%20Package"
                 delay={1}
@@ -128,7 +128,7 @@ export const PricingSection: React.FC = () => {
                 ]}
             />
             <PricingCard 
-                name="বিজনেস"
+                name="Tertiary"
                 price="৫৯৯৯"
                 whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Business%20Package"
                 delay={2}

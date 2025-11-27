@@ -61,8 +61,8 @@ export const PortfolioSection: React.FC = () => {
         </div>
 
         <div className="mt-24 text-center">
-            <h2 className="font-bengali text-3xl font-bold text-dark mb-3">সহজ এবং বাজেট ফ্রেন্ডলি প্যাকেজ</h2>
-            <p className="font-bengali text-gray-500 text-lg">কোন কন্ট্রাক্ট কিংবা গোপন চার্জ নেই</p>
+            <h2 className="font-bengali text-3xl font-bold text-dark mb-3">Quality & Quantity</h2>
+            <p className="font-bengali text-gray-500 text-lg">No হিডেন চার্জ</p>
         </div>
       </div>
     </section>
