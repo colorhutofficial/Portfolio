@@ -68,7 +68,7 @@ export const MeetingSection: React.FC = () => {
                         
                         {/* Description */}
                         <p className="font-bengali text-[#4b5563] text-[17px] md:text-[18px] leading-[1.7] mb-10">
-                            আপনার প্রোজেক্ট নিয়ে আমাদের সাথে সরাসরি কথা বলতে চান? <br className="hidden xl:block"/> 
+                            আপনার মেনু নিয়ে আমাদের সাথে সরাসরি কথা বলতে চান? <br className="hidden xl:block"/> 
                             তাহলে এখানে ক্লিক করে একটি গুগোল মিটিং বুক করুন
                         </p>
 

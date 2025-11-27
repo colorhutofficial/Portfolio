@@ -18,7 +18,7 @@ export const PortfolioSection: React.FC = () => {
   return (
     <section className="py-20 md:py-28 relative" id="demo">
       <div className="max-w-[1290px] mx-auto px-4 md:px-6">
-        <SectionHeader text="আমাদের করা কিছু লোগো" />
+        <SectionHeader text="Brand Impression" />
 
         <div className="flex justify-center gap-8 mb-16 font-medium text-gray-500">
            <div className="bg-white/80 backdrop-blur-sm p-1.5 rounded-full border border-white/50 shadow-soft flex gap-2">
