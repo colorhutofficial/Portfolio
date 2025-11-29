@@ -1,20 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SectionHeader } from './SectionHeader';
 import { Plus, Eye } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const PORTFOLIO_IMAGES = [
-    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-14.webp",
-    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-02.webp",
-    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-15.webp",
-    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-06.webp",
-    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-12.webp",
-    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-08.webp",
-    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-04.webp",
-    "https://xtrecy.com/wp-content/uploads/2025/10/New-Logo-Behance-and-Web-10.webp",
+const RESTAURANT_IMAGES = [
+    "https://colorhutbd.xyz/image/restaurant/R1.webp",
+    "https://colorhutbd.xyz/image/restaurant/R2.webp",
+    "https://colorhutbd.xyz/image/restaurant/R3.webp",
+    "https://colorhutbd.xyz/image/restaurant/R4.webp",
+    "https://colorhutbd.xyz/image/restaurant/R5.webp",
+    "https://colorhutbd.xyz/image/restaurant/R6.webp",
+    "https://colorhutbd.xyz/image/restaurant/R7.webp",
+    "https://colorhutbd.xyz/image/restaurant/R8.webp",
+];
+
+const PARLOUR_IMAGES = [
+    "https://colorhutbd.xyz/image/parlour/P1.webp",
+    "https://colorhutbd.xyz/image/parlour/P2.webp",
+    "https://colorhutbd.xyz/image/parlour/P3.webp",
+    "https://colorhutbd.xyz/image/parlour/P4.webp",
+    "https://colorhutbd.xyz/image/parlour/P5.webp",
+    "https://colorhutbd.xyz/image/parlour/P6.webp",
+    "https://colorhutbd.xyz/image/parlour/P7.webp",
+    "https://colorhutbd.xyz/image/parlour/P8.webp",
 ];
 
 export const PortfolioSection: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('Restaurant');
+
+  const getImages = () => {
+    switch (activeTab) {
+      case 'Parlour':
+        return PARLOUR_IMAGES;
+      case 'More+':
+        return [...RESTAURANT_IMAGES].reverse();
+      case 'Restaurant':
+      default:
+        return RESTAURANT_IMAGES;
+    }
+  };
+
+  const images = getImages();
+
+  const handleTabClick = (tab: string) => {
+    if (tab === 'More+') {
+      window.open('https://menu.colorhutbd.xyz', '_blank');
+    } else {
+      setActiveTab(tab);
+    }
+  };
+
   return (
     <section className="py-20 md:py-28 relative" id="demo">
       <div className="max-w-[1290px] mx-auto px-4 md:px-6">
@@ -22,22 +57,33 @@ export const PortfolioSection: React.FC = () => {
 
         <div className="flex justify-center gap-8 mb-16 font-medium text-gray-500">
            <div className="bg-white/80 backdrop-blur-sm p-1.5 rounded-full border border-white/50 shadow-soft flex gap-2">
-             {['Premium', 'Business', 'Startup'].map((tab, i) => (
-               <button key={i} className={`px-6 py-2 rounded-full transition-all duration-300 text-sm font-semibold ${i === 0 ? 'bg-primary text-white shadow-lg shadow-primary/30' : 'hover:bg-gray-100 text-gray-600'}`}>
-                 {tab}
+             {['Restaurant', 'Parlour', 'More+'].map((tab, i) => (
+               <button 
+                key={i} 
+                onClick={() => handleTabClick(tab)}
+                className={`px-6 py-2 rounded-full transition-all duration-300 text-sm font-semibold ${
+                  activeTab === tab 
+                    ? 'bg-primary text-white shadow-lg shadow-primary/30' 
+                    : 'hover:bg-gray-100 text-gray-600'
+                }`}
+               >
+                 {tab === 'More+' ? (
+                    <span>More<span className={`${activeTab === tab ? 'text-white' : 'text-primary'} font-bold text-base ml-0.5`}>+</span></span>
+                 ) : tab}
                </button>
              ))}
            </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-           {PORTFOLIO_IMAGES.map((src, idx) => (
+           <AnimatePresence mode='wait'>
+             {images.map((src, idx) => (
                <motion.div 
-                 key={idx}
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ delay: idx * 0.05 }}
+                 key={`${activeTab}-${idx}`}
+                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                 animate={{ opacity: 1, y: 0, scale: 1 }}
+                 exit={{ opacity: 0, scale: 0.9 }}
+                 transition={{ duration: 0.3, delay: idx * 0.05 }}
                  className="aspect-[4/3] overflow-hidden rounded-2xl group relative cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 bg-white border border-white/20"
                >
                   <img 
@@ -58,6 +104,7 @@ export const PortfolioSection: React.FC = () => {
                   </div>
                </motion.div>
            ))}
+           </AnimatePresence>
         </div>
 
         <div className="mt-24 text-center">

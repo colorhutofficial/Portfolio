@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
                 <ul className="space-y-3 text-gray-500 text-sm">
                     <li className="flex items-center gap-3 hover:text-primary transition-colors">
                         <i className="fas fa-building w-5 text-primary/70"></i>
-                        Xtrecy Headquarter
+                        কালার হাট পার্সোনাল মেনু এসিস্ট্যান্ট
                     </li>
                     <li className="flex items-center gap-3 hover:text-primary transition-colors">
                         <i className="fas fa-map-marker-alt w-5 text-primary/70"></i>

@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const phrases = ["রেস্টুরেন্ট", "ক্লোথিং ব্রান্ড", "ই কমার্স", "মোবাইল শপ", "এজেন্সি"];
+  const phrases = ["রেস্টুরেন্ট", "রিসোর্ট", "বাফেট", "লেডিস পার্লার", "জেন্টস পার্লার", "ক্যাফে"];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
               <span className="ml-3">মেনু</span>
             </h1>
 
-            <p className="text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed font-bengali mb-6">
+            <p className="text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed font-bengali mb-6 font-bold">
               আমাদের প্রফেশনাল ডিজাইন সার্ভিসের মাধ্যমে আপনার ব্র্যান্ডের শক্তিশালী পরিচিতি গড়ে তুলুন। ক্রিয়েটিভ, অরিজিনাল এবং স্ট্র্যাটেজিক ডিজাইন যা আপনার ব্র্যান্ডকে প্রতিযোগিতার থেকে স্পষ্টভাবে আলাদা করে তুলবে।
             </p>
 

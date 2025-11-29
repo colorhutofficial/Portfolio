@@ -15,11 +15,11 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: 'https://xtrecy.com/home/' },
-    { name: 'Services', href: 'https://xtrecy.com/services/', hasDropdown: true },
-    { name: 'About Us', href: 'https://xtrecy.com/about-us/' },
-    { name: 'Contact Us', href: 'https://xtrecy.com/contact-us/' },
-    { name: 'Blog', href: 'https://xtrecy.com/blog/' },
+    { name: 'Home', href: '#' },
+    { name: 'Services', href: '#', hasDropdown: false },
+    { name: 'About Us', href: '#' },
+    { name: 'Contact Us', href: '#' },
+    { name: 'Blog', href: '#' },
   ];
 
   return (

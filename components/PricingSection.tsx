@@ -5,13 +5,15 @@ import { motion } from 'framer-motion';
 interface PricingCardProps {
     name: string;
     price: string;
+    originalPrice?: string;
+    discount?: string;
     features: { text: string, check: boolean }[];
     whatsappLink: string;
     delay: number;
     isPopular?: boolean;
 }
 
-const PricingCard: React.FC<PricingCardProps> = ({ name, price, features, whatsappLink, delay, isPopular }) => (
+const PricingCard: React.FC<PricingCardProps> = ({ name, price, originalPrice, discount, features, whatsappLink, delay, isPopular }) => (
     <motion.div 
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -31,9 +33,21 @@ const PricingCard: React.FC<PricingCardProps> = ({ name, price, features, whatsa
 
         <div className="text-center mb-8 mt-4 w-full border-b border-gray-100 pb-8">
             <h6 className="font-bengali text-xl font-bold text-gray-500 mb-4 tracking-wide">{name}</h6>
-            <div className="flex items-center justify-center text-dark font-bold">
-                <span className="text-2xl mr-1 text-gray-400">৳</span>
-                <span className={`text-5xl font-bengali tracking-tight ${isPopular ? 'text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-700' : 'text-dark'}`}>{price}</span>
+            <div className="flex items-center justify-center text-dark font-bold gap-3">
+                <div className="flex items-center">
+                    <span className="text-2xl mr-1 text-gray-400 self-start mt-2">৳</span>
+                    <span className={`text-5xl font-bengali tracking-tight ${isPopular ? 'text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-700' : 'text-dark'}`}>{price}</span>
+                </div>
+                {originalPrice && (
+                    <div className="flex flex-col items-start ml-1">
+                        {discount && (
+                            <span className="bg-red-100 text-red-600 text-[11px] font-bold px-2 py-0.5 rounded-full mb-1">
+                                {discount} ছাড়
+                            </span>
+                        )}
+                        <span className="text-xl text-gray-400 line-through font-bengali decoration-red-400/60 decoration-2">৳{originalPrice}</span>
+                    </div>
+                )}
             </div>
             <p className="text-gray-400 text-sm mt-3 bg-gray-50 inline-block px-3 py-1 rounded-full border border-gray-100">এককালীন পেমেন্ট</p>
         </div>
@@ -96,7 +110,7 @@ export const PricingSection: React.FC = () => {
          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8 items-center">
             <PricingCard 
                 name="Primary"
-                price="১৫৯৯"
+                price="১৯৯৯"
                 whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Startup%20Package"
                 delay={0}
                 
@@ -107,8 +121,9 @@ export const PricingSection: React.FC = () => {
                     { text: "অনলাইন/ফুড ডেলিভারি কম্প্যাটিবল ফাইল", check: true },
                     { text: "৫ দিনের ইমারজেন্সি সার্ভিস", check: true },
                     { text: "কাস্টম QR কোড", check: true },
-                    { text: "Bi-Fold / Tri-Fold ডিজাইন", check: true },
-                    { text: "ইন্টারেকটিভ ডিজিটাল মেনু", check: true },
+                    { text: "Bi-Fold / Tri-Fold ডিজাইন (Takeaway)", check: false },
+                    { text: "ইন্টারেকটিভ ডিজিটাল মেনু", check: false },
+                    { text: "ডিজিটাল মেনু", check: false },
                     { text: "হাই-রেজোলিউশন ইমেজ সাপোর্ট", check: false },
                     { text: "বাংলা ও English মিক্স মেনু", check: false },
                     { text: "প্রফেশনাল ফটো এডিটিং ও সোশ্যাল ভিজুয়ালস", check: false }, 
@@ -127,8 +142,9 @@ export const PricingSection: React.FC = () => {
                     { text: "অনলাইন/ফুড ডেলিভারি কম্প্যাটিবল ফাইল", check: true },
                     { text: "৩ দিনের ইমারজেন্সি সার্ভিস", check: true },
                     { text: "কাস্টম QR কোড", check: true },
-                    { text: "Bi-Fold / Tri-Fold ডিজাইন", check: true },
-                    { text: "ইন্টারেকটিভ ডিজিটাল মেনু", check: true },
+                    { text: "Bi-Fold / Tri-Fold ডিজাইন (Takeaway)", check: true },
+                    { text: "ইন্টারেকটিভ ডিজিটাল মেনু", check: false },
+                    { text: "ডিজিটাল মেনু", check: false },
                     { text: "হাই-রেজোলিউশন ইমেজ সাপোর্ট", check: false },
                     { text: "বাংলা ও English মিক্স মেনু", check: false },
                     { text: "প্রফেশনাল ফটো এডিটিং ও সোশ্যাল ভিজুয়ালস", check: false },
@@ -136,7 +152,9 @@ export const PricingSection: React.FC = () => {
             />
             <PricingCard 
                 name="Tertiary"
-                price="৫৯৯৯"
+                price="৩৯৯৯"
+                originalPrice="৫৯৯৯"
+                discount="৩৩%"
                 whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Business%20Package"
                 delay={2}
                 features={[
@@ -146,8 +164,9 @@ export const PricingSection: React.FC = () => {
                     { text: "অনলাইন/ফুড ডেলিভারি কম্প্যাটিবল ফাইল", check: true },
                     { text: "১ দিনের ইমারজেন্সি সার্ভিস", check: true },
                     { text: "কাস্টম QR কোড", check: true },
-                    { text: "Bi-Fold / Tri-Fold ডিজাইন", check: true },
+                    { text: "Bi-Fold / Tri-Fold ডিজাইন (Takeaway)", check: true },
                     { text: "ইন্টারেকটিভ ডিজিটাল মেনু", check: true },
+                    { text: "ডিজিটাল মেনু", check: true },
                     { text: "হাই-রেজোলিউশন ইমেজ সাপোর্ট", check: true },
                     { text: "বাংলা ও English মিক্স মেনু", check: true },
                     { text: "প্রফেশনাল ফটো এডিটিং ও সোশ্যাল ভিজুয়ালস", check: true },
