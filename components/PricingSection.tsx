@@ -99,15 +99,19 @@ export const PricingSection: React.FC = () => {
                 price="১৫৯৯"
                 whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Startup%20Package"
                 delay={0}
+                
                 features={[
-                    { text: "১ টি লোগো কনসেপ্ট", check: true },
-                    { text: "ডেলিভারি সময় ৩ দিন", check: true },
-                    { text: "JPG এবং PNG ফাইল", check: true },
-                    { text: "ভেক্টর ফরমেট (AI ,EPS)", check: true },
-                    { text: "একটি রিভিশন", check: true },
-                    { text: "লোগো কিট", check: false },
-                    { text: "লোগো সার্টিফিকেট", check: false },
-                    { text: "ব্রান্ড গাইডলাইন", check: false },
+                    { text: "৮-পেজ প্রিমিয়াম মেনু ডিজাইন", check: true },
+                    { text: "৩টি রিভিশন", check: true },
+                    { text: "JPG/PDF (HD) – সোশ্যাল মিডিয়া রেডি", check: true },
+                    { text: "অনলাইন/ফুড ডেলিভারি কম্প্যাটিবল ফাইল", check: true },
+                    { text: "৫ দিনের ইমারজেন্সি সার্ভিস", check: true },
+                    { text: "কাস্টম QR কোড", check: true },
+                    { text: "Bi-Fold / Tri-Fold ডিজাইন", check: true },
+                    { text: "ইন্টারেকটিভ ডিজিটাল মেনু", check: true },
+                    { text: "হাই-রেজোলিউশন ইমেজ সাপোর্ট", check: false },
+                    { text: "বাংলা ও English মিক্স মেনু", check: false },
+                    { text: "প্রফেশনাল ফটো এডিটিং ও সোশ্যাল ভিজুয়ালস", check: false }, 
                 ]}
             />
             <PricingCard 
@@ -117,14 +121,17 @@ export const PricingSection: React.FC = () => {
                 delay={1}
                 isPopular={true}
                 features={[
-                    { text: "২ টি প্রিমিয়াম লোগো কনসেপ্ট", check: true },
-                    { text: "ডেলিভারি সময় ৪ দিন", check: true },
-                    { text: "JPG এবং PNG ফাইল", check: true },
-                    { text: "ভেক্টর ফরমেট (AI ,EPS)", check: true },
-                    { text: "৩ টি রিভিশন", check: true },
-                    { text: "লোগো কিট", check: false },
-                    { text: "লোগো সার্টিফিকেট", check: false },
-                    { text: "ব্রান্ড গাইডলাইন", check: false },
+                    { text: "16-পেজ প্রিমিয়াম মেনু ডিজাইন", check: true },
+                    { text: "৫টি রিভিশন", check: true },
+                    { text: "JPG/PDF (HD) – সোশ্যাল মিডিয়া রেডি", check: true },
+                    { text: "অনলাইন/ফুড ডেলিভারি কম্প্যাটিবল ফাইল", check: true },
+                    { text: "৩ দিনের ইমারজেন্সি সার্ভিস", check: true },
+                    { text: "কাস্টম QR কোড", check: true },
+                    { text: "Bi-Fold / Tri-Fold ডিজাইন", check: true },
+                    { text: "ইন্টারেকটিভ ডিজিটাল মেনু", check: true },
+                    { text: "হাই-রেজোলিউশন ইমেজ সাপোর্ট", check: false },
+                    { text: "বাংলা ও English মিক্স মেনু", check: false },
+                    { text: "প্রফেশনাল ফটো এডিটিং ও সোশ্যাল ভিজুয়ালস", check: false },
                 ]}
             />
             <PricingCard 
@@ -133,14 +140,17 @@ export const PricingSection: React.FC = () => {
                 whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Business%20Package"
                 delay={2}
                 features={[
-                    { text: "৩ টি বিজনেস লোগো কনসেপ্ট", check: true },
-                    { text: "ডেলিভারি সময় ৫ দিন", check: true },
-                    { text: "JPG এবং PNG ফাইল", check: true },
-                    { text: "ভেক্টর ফরমেট (AI ,EPS)", check: true },
-                    { text: "আনলিমিটেড রিভিশন", check: true },
-                    { text: "লোগো কিট", check: true },
-                    { text: "লোগো সার্টিফিকেট", check: true },
-                    { text: "ব্রান্ড গাইডলাইন", check: true },
+                    { text: "২৪-পেজ প্রিমিয়াম মেনু ডিজাইন", check: true },
+                    { text: "৭টি রিভিশন", check: true },
+                    { text: "JPG/PDF (HD) – সোশ্যাল মিডিয়া রেডি", check: true },
+                    { text: "অনলাইন/ফুড ডেলিভারি কম্প্যাটিবল ফাইল", check: true },
+                    { text: "১ দিনের ইমারজেন্সি সার্ভিস", check: true },
+                    { text: "কাস্টম QR কোড", check: true },
+                    { text: "Bi-Fold / Tri-Fold ডিজাইন", check: true },
+                    { text: "ইন্টারেকটিভ ডিজিটাল মেনু", check: true },
+                    { text: "হাই-রেজোলিউশন ইমেজ সাপোর্ট", check: true },
+                    { text: "বাংলা ও English মিক্স মেনু", check: true },
+                    { text: "প্রফেশনাল ফটো এডিটিং ও সোশ্যাল ভিজুয়ালস", check: true },
                 ]}
             />
          </div>
