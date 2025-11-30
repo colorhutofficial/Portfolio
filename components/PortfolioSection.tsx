@@ -56,7 +56,7 @@ export const PortfolioSection: React.FC = () => {
         <SectionHeader text="Brand Impression" />
 
         <div className="flex justify-center gap-8 mb-16 font-medium text-gray-500">
-           <div className="bg-white/80 backdrop-blur-sm p-1.5 rounded-full border border-white/50 shadow-soft flex gap-2">
+           <div className="bg-white/80 backdrop-blur-sm p-1.5 rounded-full border border-white/50 shadow-soft flex gap-2 flex-wrap justify-center">
              {['Restaurant', 'Parlour', 'More+'].map((tab, i) => (
                <button 
                 key={i} 

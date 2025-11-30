@@ -3,6 +3,22 @@ import { SectionHeader } from './SectionHeader';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+const MARKET_IMAGES = [
+    "https://colorhutbd.xyz/image/place/place1.jpg",
+    "https://colorhutbd.xyz/image/place/place2.jpg",
+    "https://colorhutbd.xyz/image/place/place3.jpg",
+    "https://colorhutbd.xyz/image/place/place4.jpg",
+    "https://colorhutbd.xyz/image/place/place5.jpg",
+    "https://colorhutbd.xyz/image/place/place6.jpg",
+    "https://colorhutbd.xyz/image/place/place7.jpg",
+    "https://colorhutbd.xyz/image/place/place8.jpg",
+    "https://colorhutbd.xyz/image/place/place9.jpg",
+    "https://colorhutbd.xyz/image/place/place10.jpg",
+    "https://colorhutbd.xyz/image/place/place11.jpg",
+    "https://colorhutbd.xyz/image/place/place12.jpg",
+    "https://colorhutbd.xyz/image/place/place13.jpg"
+];
+
 export const ProcessAndTools: React.FC = () => {
   const steps = [
     {
@@ -75,17 +91,37 @@ export const ProcessAndTools: React.FC = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="pt-16 border-t border-gray-200/60"
+          className="pt-16 border-t border-gray-200/60 overflow-hidden"
         >
             <div className="text-center mb-10">
                 <h3 className="font-bengali text-2xl font-bold text-gray-400 uppercase tracking-widest">Global Markets Experience</h3>
             </div>
-            <div className="flex justify-center items-center">
-                <img 
-                    src="https://xtrecy.com/wp-content/uploads/2024/10/programms-1024x90.webp" 
-                    alt="Tools we use" 
-                    className="max-w-full h-auto opacity-50 hover:opacity-100 transition-all duration-700 grayscale hover:grayscale-0 transform hover:scale-105"
-                />
+            
+            <style>{`
+              @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .animate-marquee {
+                animation: marquee 40s linear infinite;
+              }
+              .animate-marquee:hover {
+                animation-play-state: paused;
+              }
+            `}</style>
+
+            <div className="w-full overflow-hidden mask-linear-fade">
+                <div className="flex items-center gap-8 animate-marquee w-max">
+                    {/* Double the list for infinite loop effect */}
+                    {[...MARKET_IMAGES, ...MARKET_IMAGES].map((img, idx) => (
+                        <img 
+                            key={idx}
+                            src={img} 
+                            alt={`Market Experience ${idx}`} 
+                            className="h-20 md:h-28 w-auto object-contain opacity-70 hover:opacity-100 transition-all duration-500 grayscale hover:grayscale-0 rounded-xl flex-shrink-0"
+                        />
+                    ))}
+                </div>
             </div>
         </motion.div>
       </div>
