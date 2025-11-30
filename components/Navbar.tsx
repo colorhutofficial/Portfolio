@@ -73,7 +73,7 @@ export const Navbar: React.FC = () => {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <a href="#" className="bg-primary hover:bg-primary-dark text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          <a href="#meeting" className="bg-primary hover:bg-primary-dark text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 inline-block">
             Sign up
           </a>
         </div>
@@ -108,8 +108,9 @@ export const Navbar: React.FC = () => {
                 </a>
               ))}
               <a 
-              href="#" 
+              href="#meeting" 
               className="bg-primary text-white text-center px-6 py-3 rounded-lg mt-4 font-semibold"
+              onClick={() => setMobileMenuOpen(false)}
               >
                 Sign up
               </a>
