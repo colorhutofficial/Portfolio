@@ -126,14 +126,14 @@ export const Hero: React.FC = () => {
               <div className="flex justify-center items-center gap-12 lg:pl-4 shrink-0">
                 {/* Stat 1 */}
                 <div className="text-center">
-                  <h2 className="text-5xl md:text-6xl font-bold text-dark mb-2">৯৭%</h2>
-                  <p className="font-bengali text-lg font-medium text-gray-600">প্রোজেক্ট কমপ্লিট</p>
+                  <h2 className="text-5xl md:text-6xl font-bold text-dark mb-2">৬৩৯</h2>
+                  <p className="font-bengali text-lg font-medium text-gray-600">Coverage Thana</p>
                 </div>
 
                 {/* Stat 2 */}
                 <div className="text-center">
-                  <h2 className="text-5xl md:text-6xl font-bold text-dark mb-2">৫+</h2>
-                  <p className="font-bengali text-lg font-medium text-gray-600">বছরের অভিজ্ঞতা</p>
+                  <h2 className="text-5xl md:text-6xl font-bold text-dark mb-2">১৪+</h2>
+                  <p className="font-bengali text-lg font-medium text-gray-600">Coverage County</p>
                 </div>
               </div>
 
