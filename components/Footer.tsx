@@ -16,19 +16,19 @@ export const Footer: React.FC = () => {
                 <ul className="space-y-3 text-gray-500 text-sm">
                     <li className="flex items-center gap-3 hover:text-primary transition-colors">
                         <i className="fas fa-building w-5 text-primary/70"></i>
-                        কালার হাট পার্সোনাল মেনু এসিস্ট্যান্ট
+                        COLOR HUT Headquarter
                     </li>
                     <li className="flex items-center gap-3 hover:text-primary transition-colors">
                         <i className="fas fa-map-marker-alt w-5 text-primary/70"></i>
-                        Savar, Dhaka, bangladesh
+                        House No. 14, Road No. A, Block A, Sontek, South Kajla, Jatrabari, Dhaka - 1236
                     </li>
                     <li className="flex items-center gap-3 hover:text-primary transition-colors">
                         <i className="fas fa-phone-alt w-5 text-primary/70"></i>
-                        +8801868082488
+                        +8801919-760626
                     </li>
                     <li className="flex items-center gap-3 hover:text-primary transition-colors">
                         <i className="fas fa-envelope w-5 text-primary/70"></i>
-                        support@xtrecy.com
+                        colorhut.official@gmail.com
                     </li>
                 </ul>
             </div>
@@ -68,15 +68,18 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">© 2024 Xtrecy . All rights reserved</p>
+            <p className="text-gray-500 text-sm">© 2025 COLOR HUT . All rights reserved</p>
             <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110 shadow-sm">
+                <a href="https://www.facebook.com/colorhutbd" className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110 shadow-sm">
                     <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-blue-400 hover:bg-blue-400 hover:text-white transition-all transform hover:scale-110 shadow-sm">
-                    <i className="fab fa-twitter"></i>
+                <a href="https://www.instagram.com/colorhutofficial" className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-all transform hover:scale-110 shadow-sm">
+                    <i className="fab fa-instagram"></i>
                 </a>
-                <a href="#" className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-all transform hover:scale-110 shadow-sm">
+                <a href="https://www.tiktok.com/@colorhutofficial" className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-blue-400 hover:bg-blue-400 hover:text-white transition-all transform hover:scale-110 shadow-sm">
+                    <i className="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.youtube.com/@ColorHutOfficial" className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-all transform hover:scale-110 shadow-sm">
                     <i className="fab fa-youtube"></i>
                 </a>
             </div>
