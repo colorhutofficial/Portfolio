@@ -136,7 +136,7 @@ export const PricingSection: React.FC = () => {
                 delay={1}
                 isPopular={true}
                 features={[
-                    { text: "16-পেজ প্রিমিয়াম মেনু ডিজাইন", check: true },
+                    { text: "১৬-পেজ প্রিমিয়াম মেনু ডিজাইন", check: true },
                     { text: "৫টি রিভিশন", check: true },
                     { text: "JPG/PDF (HD) – সোশ্যাল মিডিয়া রেডি", check: true },
                     { text: "অনলাইন/ফুড ডেলিভারি কম্প্যাটিবল ফাইল", check: true },
