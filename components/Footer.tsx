@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
                     { icon: "fab fa-facebook-f", href: "https://www.facebook.com/colorhutbd", color: "hover:bg-[#1877F2] hover:border-[#1877F2]" },
                     { icon: "fab fa-instagram", href: "https://www.instagram.com/colorhutofficial", color: "hover:bg-gradient-to-br hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] hover:border-transparent" },
                     { icon: "fab fa-tiktok", href: "https://www.tiktok.com/@colorhutofficial", color: "hover:bg-white hover:text-black hover:border-white" },
-                    { icon: "fab fa-youtube", href: "https://www.youtube.com/@ColorHutOfficial", color: "hover:bg-[#FF0000] hover:border-[#FF0000]" },
+                    { icon: "fab fa-youtube", href: "https://www.youtube.com/@ColorHut_Official", color: "hover:bg-[#FF0000] hover:border-[#FF0000]" },
                 ].map((social, i) => (
                     <a 
                         key={i} 
