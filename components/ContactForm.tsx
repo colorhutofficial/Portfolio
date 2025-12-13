@@ -21,7 +21,7 @@ export const ContactForm: React.FC = () => {
                        <input 
                           type="text" 
                           className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all shadow-sm"
-                          placeholder="Ex: Rafid Ahsan"
+                          placeholder="Ex: Abdul Awal"
                        />
                    </div>
                    <div className="group">
@@ -39,7 +39,7 @@ export const ContactForm: React.FC = () => {
                    <textarea 
                       rows={5}
                       className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all shadow-sm resize-none"
-                      placeholder="আপনার কি ধরনের লোগো চাচ্ছেন, কোম্পানির ধরন, আপনার গ্রাহক কে - এই তথ্যগুলো লিখুন..."
+                      placeholder="আপনার কি ধরনের মেনু চাচ্ছেন, কোম্পানির ধরন, আপনার গ্রাহক কে - এই তথ্যগুলো লিখুন..."
                    ></textarea>
                </div>
 

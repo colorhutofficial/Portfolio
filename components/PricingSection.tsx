@@ -111,7 +111,7 @@ export const PricingSection: React.FC = () => {
             <PricingCard 
                 name="Primary"
                 price="১৯৯৯"
-                whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Startup%20Package"
+                whatsappLink="https://wa.me/8801919760626?text=I%20want%20to%20order%20Startup%20Package"
                 delay={0}
                 
                 features={[
@@ -132,7 +132,7 @@ export const PricingSection: React.FC = () => {
             <PricingCard 
                 name="Secondary"
                 price="২৯৯৯"
-                whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Premium%20Package"
+                whatsappLink="https://wa.me/8801919760626?text=I%20want%20to%20order%20Premium%20Package"
                 delay={1}
                 isPopular={true}
                 features={[
@@ -155,7 +155,7 @@ export const PricingSection: React.FC = () => {
                 price="৩৯৯৯"
                 originalPrice="৫৯৯৯"
                 discount="৩৩%"
-                whatsappLink="https://wa.me/8801321912188?text=I%20want%20to%20order%20Business%20Package"
+                whatsappLink="https://wa.me/8801919760626?text=I%20want%20to%20order%20Business%20Package"
                 delay={2}
                 features={[
                     { text: "২৪-পেজ প্রিমিয়াম মেনু ডিজাইন", check: true },
